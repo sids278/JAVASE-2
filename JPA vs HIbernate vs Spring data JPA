@@ -20,3 +20,4 @@ DATABASE
     │  Returns raw data rows
     ▼
 Back up the chain → List<User> returned to your code
+Refrence: https://medium.com/@burakkocakeu/jpa-hibernate-and-spring-data-jpa-efa71feb82ac

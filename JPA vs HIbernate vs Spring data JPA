@@ -1,0 +1,22 @@
+YOUR CODE
+    │
+    │  userRepo.findByName("John")
+    ▼
+SPRING DATA JPA
+    │  Sees method name → builds JPQL:
+    │  "SELECT u FROM User u WHERE u.name = ?"
+    ▼
+JPA (EntityManager interface)
+    │  Standardized query interface
+    │  Passes query down to provider
+    ▼
+HIBERNATE
+    │  Translates JPQL → real SQL:
+    │  "SELECT * FROM users WHERE full_name = ?"
+    │  Executes against DB via JDBC
+    │  Maps result rows → User objects
+    ▼
+DATABASE
+    │  Returns raw data rows
+    ▼
+Back up the chain → List<User> returned to your code
